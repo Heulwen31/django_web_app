@@ -5,3 +5,6 @@ from django.http import HttpResponse
 
 def user(request):
     return HttpResponse("<h1> hello <h1/>")
+
+def login(request):
+    return render(request, "user/login.html")
