@@ -32,15 +32,15 @@
         <nav class="sticky">
             <div class="header-title">
                 <div class="header-title-text">
-                    <a href="home/">Your Site Title</a>
+                    <a href="{% url 'home' %}">Your Site Title</a>
                 </div>
             </div>
             <div class="header-nav">
                 <ul class="main-nav">
-                    <li><a href="shop/">Shop</a></li>
-                    <li><a href="#">Our Story</a></li>
+                    <li><a href="{% url 'shopPage' %}">Shop</a></li>
+                    <li><a href="{% url 'story' %}">Our Story</a></li>
                     <li><a href="#">Journal</a></li>
-                    <li id="contact"><a href="contact/">Contact</a></li>
+                    <li id="contact"><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
             <div class="header-actions">
@@ -48,7 +48,7 @@
                     <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="shop/"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="{% url 'shopPage' %}"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
             </div>
         </nav>
@@ -79,12 +79,12 @@
             </div>
             <div class="col span-1-of-2">
                 <ul class="nav-end-1">
-                    <li><a href="shop/">Shop</a></li>
+                    <li><a href="{% url 'shopPage' %}">Shop</a></li>
                     <li><a href="#">Journal</a></li>
                 </ul>
                 <ul class="nav-end-2">
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{% url 'story' %}">Our Story</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
         </div>

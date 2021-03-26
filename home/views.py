@@ -10,3 +10,8 @@ def home(request):
 
 def contact(request):
     return render(request, "home/contact.html")
+
+
+
+def story(request):
+    return render(request, "home/story.html")
