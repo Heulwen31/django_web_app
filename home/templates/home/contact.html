@@ -1,0 +1,94 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Your Site Title</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'home/resources/favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'home/resources/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'home/resources/favicons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'home/resources/favicons/site.webmanifest' %}">
+    <link rel="shortcut icon" href="{% static 'home/resources/favicons/favicon.ico' %}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{% static 'home/resources/favicons/browserconfig.xml' %}">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/fe0548406c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home/vendors/css/grid.css' %}">
+    <link rel="stylesheet" href="{% static 'home/resources/css/contact.css' %}">
+    <!-- <link rel="stylesheet" href="resources/css/queries.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="{% static 'home/vendors/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'home/resources/js/contact.js' %}"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="sticky">
+            <div class="header-title">
+                <div class="header-title-text">
+                    <a href="home/">Your Site Title</a>
+                </div>
+            </div>
+            <div class="header-nav">
+                <ul class="main-nav">
+                    <li><a href="shop/">Shop</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Journal</a></li>
+                    <li id="contact"><a href="contact/">Contact</a></li>
+                </ul>
+            </div>
+            <div class="header-actions">
+                <ul class="socials">
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="shop/"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="heading-main-box">
+                <h1>Contact Us</h1>
+                <p>
+                    The following text is placeholder known as “lorem ipsum,” which is scrambled 
+                    <br> Latin used by designers to mimic real copy. 
+                    Lorem ipsum dolor sit amet nullam.
+                </p>
+                <a href="#" class="btn">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-end">
+        <div class="row">
+            <div class="col span-1-of-2 box-end">
+                <h4>Crosby</h4>
+                <h5>Made with <a href="#">Rukitori</a></h5>
+                <ul class="socials-end">
+                    <li><a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="nav-end-1">
+                    <li><a href="shop/">Shop</a></li>
+                    <li><a href="#">Journal</a></li>
+                </ul>
+                <ul class="nav-end-2">
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
