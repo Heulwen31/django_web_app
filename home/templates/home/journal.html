@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Your Site Title</title>
+    <title>Your Site Title - Journal</title>
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'home/resources/favicons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'home/resources/favicons/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'home/resources/favicons/favicon-16x16.png' %}">
@@ -19,12 +19,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{% static 'home/vendors/css/grid.css' %}">
-    <link rel="stylesheet" href="{% static 'home/resources/css/story.css' %}">
-    <!-- <link rel="stylesheet" href="resources/css/queries.css"> -->
+    <link rel="stylesheet" href="{% static 'home/resources/css/journal.css' %}">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="{% static 'home/vendors/js/jquery.waypoints.min.js' %}"></script>
-    <script src="{% static 'home/resources/js/story.js' %}"></script>
+    <script src="{% static 'home/resources/js/contact.js' %}"></script>
 </head>
 
 <body>
@@ -38,8 +37,8 @@
             <div class="header-nav">
                 <ul class="main-nav">
                     <li><a href="{% url 'shopPage' %}">Shop</a></li>
-                    <li id="story"><a href="{% url 'story' %}">Our Story</a></li>
-                    <li><a href="{% url 'journal' %}">Journal</a></li>
+                    <li><a href="{% url 'story' %}">Our Story</a></li>
+                    <li id="journal"><a href="{% url 'journal' %}">Journal</a></li>
                     <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
@@ -54,50 +53,28 @@
         </nav>
         <div class="clearfix"></div>
         <div class="row">
-            <div class="heading-main-box">
-                <h1>Our Story</h1>
+            <div class="col span-1-of-2">
+                <div class="journal-box">
+                    <img src="{% static 'home/resources/img/Plant_05_3x2_v02.gif' %}" alt="" class="journal-img">
+                    <div class="content-journal">
+                        <h4>6/6/19</h4>
+                        <h3>Is It Flowers You're After?</h3>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col span-1-of-2">
+                <div class="journal-box">
+                    <img src="{% static 'home/resources/img/Plant_04_3x2_v02.gif' %}" alt="" class="journal-img">
+                    <div class="content-journal">
+                        <h4>6/3/19</h4>
+                        <h3>Searching for Succulents?</h3>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-
-    <section class="section-content">
-        <div class="row">
-            <p class="p-header">
-                At vero eos et accusamus et iusto odio
-                <br> dignissimos ducimus qui blanditiis praesentium
-                <br> voluptatum deleniti atque corrupti quos dolores
-                <br> et quas molestias excepturi sint occaecati
-                <br> cupiditate non provident.
-            </p>
-            <img src="{% static 'home/resources/img/plant-textures-2.jpg' %}" alt="" class="img-content">
-            <p class="p-caption">
-                Sed ut perspiciatis unde omnis iste natus error
-                <br> sit voluptatem accusantium doloremque laudantium, totam
-                <br> rem aperiam,
-            </p>
-            <div class="content">
-                <p>
-                    The following text is placeholder known as “lorem ipsum,” which is scrambled Latin used by designers to
-                    mimic real copy. Lorem ipsum dolor sit amet Nullam vel ultricies metus, at tincidunt arcu. Morbi
-                    vestibulum, ligula ut efficitur mollis, mi massa accumsan justo, accumsan auctor orci lectus ac ipsum.
-                    Proin porta nisl sem, ac suscipit lorem dignissim et. Curabitur euismod nec augue vitae dictum. Nam
-                    mattis, massa quis consequat molestie, erat justo vulputate tortor, a sollicitudin turpis felis eget
-                    risus. Aliquam viverra urna felis, eu ornare enim consectetur sed. Morbi vitae ultrices velit. Sed
-                    molestie consectetur metus. Proin neque eros, dapibus ac accumsansodales sit.
-    
-                    <br> <br>
-    
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                    rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                    explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                    consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-                    dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-                    incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-                    exercitationem ullam corporis suscipit laboriosam.
-                </p>
-            </div>
-        </div>
-    </section>
 
     <section class="section-end">
         <div class="row">

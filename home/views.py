@@ -15,3 +15,6 @@ def contact(request):
 
 def story(request):
     return render(request, "home/story.html")
+
+def journal(request):
+    return render(request, "home/journal.html")
