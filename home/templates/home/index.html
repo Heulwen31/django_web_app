@@ -45,7 +45,7 @@
             </div>
             <div class="header-actions">
                 <ul class="socials">
-                    {% if  request.user.is_authenticated %}
+                    {% if request.user.is_authenticated %}
                     <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i></a></li>
                     {% else %}
                     <li><a href="{% url 'login' %}"><i class="far fa-user"></i></a></li>
