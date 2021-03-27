@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import CreateUserForm
 
 
-def login(request):
+def logIn(request):
     if request.user.is_authenticated:
         return redirect('home')
     else:
