@@ -19,11 +19,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{% static 'home/vendors/css/grid.css' %}">
-    <link rel="stylesheet" href="{% static 'home/resources/css/journal.css' %}">
+    <link rel="stylesheet" href="{% static 'home/resources/css/journal1.css' %}">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="{% static 'home/vendors/js/jquery.waypoints.min.js' %}"></script>
-    <script src="{% static 'home/resources/js/contact.js' %}"></script>
+    <script src="{% static 'home/resources/js/journal-x.js' %}"></script>
 </head>
 
 <body>
@@ -53,25 +53,41 @@
         </nav>
         <div class="clearfix"></div>
         <div class="row">
-            <div class="col span-1-of-2">
-                <div class="journal-box">
-                    <a href="{% url 'journal1' %}"><img src="{% static 'home/resources/img/Plant_05_3x2_v02.gif' %}" alt="" class="journal-img"></a>
-                    <div class="content-journal">
-                        <h4>6/6/19</h4>
-                        <a href="{% url 'journal1' %}"><h3>Is It Flowers You're After?</h3></a>
-                        <a href="{% url 'journal1' %}">Read More</a>
-                    </div>
+            <div class="journal1">
+                <h4>Jun 6</h4>
+                <i class="fas fa-circle"></i>
+                <h4>Written By John Doe</h4>
+                <h1>Is It Flowers You're After?</h1>
+                <img src="{% static 'home/resources/img/Plant_05_3x2_v02.gif' %}" alt="">
+                <div class="p-long">
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        <br><br>
+                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+                        dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                        praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit
+                        amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                        aliquam erat volutpat.
+                        <br><br>
+                        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                        aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
+                        esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
+                        iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+                        facilisi.
+                    </p>
                 </div>
+                <h5>John Doe</h5>
             </div>
-            <div class="col span-1-of-2">
-                <div class="journal-box">
-                    <a href="{% url 'journal2' %}"><img src="{% static 'home/resources/img/Plant_04_3x2_v02.gif' %}" alt="" class="journal-img"></a>
-                    <div class="content-journal">
-                        <h4>6/3/19</h4>
-                        <a href="{% url 'journal2' %}"><h3>Searching for Succulents?</h3></a>
-                        <a href="{% url 'journal2' %}">Read More</a>
-                    </div>
-                </div>
+            <div class="next">
+                <a href="{% url 'journal2' %}">Searching for Succulents? <i class="fas fa-chevron-right"></i></a>
             </div>
         </div>
     </header>

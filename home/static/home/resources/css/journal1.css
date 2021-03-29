@@ -53,7 +53,8 @@ li{
 
 .header{
     background-color: #38383b;
-    height: 100vh;
+    height: auto;
+    padding-bottom: 5vmax;
 }
 
 #journal{
@@ -111,42 +112,65 @@ li{
     z-index: 900;
 }
 
-/* -----------journal------- */
+/* -----------journal1------- */
 
-.journal-img{
-    width: 98%;
-}
-
-.journal-box{
-    margin-left: 10px;
-    margin-top: 30%;
+.journal1{
+    margin-top: 11vmax;
     color: whitesmoke;
-}
-
-.content-journal{
-    margin-top: 35px;
-}
-
-.content-journal h4{
     text-align: center;
-    margin-bottom: 30px;
-    font-weight: 500;
 }
 
-.content-journal a h3{
-    text-align: center;
+.journal1 h4{
+    font-size: 17px;
+    font-weight: 200;
+    word-spacing: 2px;
+    display: inline-block;
+}
+
+.journal1 i{
+    font-size: 6px;
+    position: relative;
+    top: -4px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.journal1 h1{
+    margin-top: 50px;
+    font-size: 60px;
+    font-weight: 100;
+    margin-bottom: 110px;
+}
+
+.journal1 img{
+    width: 45%;
+    margin-bottom: 120px;
+}
+
+.p-long{
+    width: 50%;
+    margin-left: 27%;
+    text-align: left;
+    font-size: 18px;
+    word-spacing: 2px;
+    line-height: 160%;
+}
+
+.journal1 h5{
+    margin-top: 100px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.next{
+    margin-left: 75%;
+    width: 40%;
+    margin-top: 150px;
+}
+
+.next a{
     font-size: 35px;
     font-weight: 100;
-    margin-bottom: 30px;
-    color: white;
-}
-
-.content-journal a{
-    color: #a59494;
-    margin-left: 43%;
-    font-size: 15px;
-    border-bottom: 1px solid #a59494;
-    padding-bottom: 2px;
 }
 
 /* --------------SECTION-END------------------- */

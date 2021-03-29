@@ -12,9 +12,15 @@ def contact(request):
     return render(request, "home/contact.html")
 
 
-
 def story(request):
     return render(request, "home/story.html")
 
+
 def journal(request):
     return render(request, "home/journal.html")
+
+def journal1(request):
+    return render(request, "home/journal1.html")
+
+def journal2(request):
+    return render(request, "home/journal2.html")
