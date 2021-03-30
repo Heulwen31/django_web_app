@@ -3,7 +3,13 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-image: linear-gradient(45deg, rgba(2,58,154,0.8), rgba(1,2,9,0.6)), url(../img/background_login.jpg);
+}
+
+body{
+    background-image: linear-gradient(45deg, rgba(23,24,25,0.2), rgba(49,41,45,0.2)) ,url(../img/Header_02_022-copy.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .user_card {
