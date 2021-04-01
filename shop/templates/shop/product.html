@@ -54,55 +54,65 @@
     <div class="clearfix"></div>
   </header>
 
+
   <section class="product-details">
-<<<<<<< HEAD
     <p class="head">{{ product.name }}</p>
     <div class="row">
       <div class="col span-1-of-2">
-        <img src="{{ product.image1.url }}" class="product-img" alt="">
+        <img src="{{ product.image1.url }}" class="product-img"">
       </div>
       <div class="col span-1-of-2">
         <div class="form">
           <h1>{{ product.name }}</h1>
-=======
-    {% for instant in object_list %}
-    <p class="head">{{ instant.name }}</p>
-    <div class="row">
-      <div class="col span-1-of-2">
-        <img src="{{ instant.image1.url }}" class="product-img" alt="">
-      </div>
-      <div class="col span-1-of-2">
-        <div class="form">
-          <h1>{{ instant.name }}</h1>
->>>>>>> e7ad210fe9de3e17f6030a6611c6438f9c547aef
+          <h2 id="cost">from ${{ product.cost }}.00</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
             <br> eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <form action="">
+          <form>
             <label>Size:</label>
             <br>
-            <select>
-              <option value="">Select Size</option>
-              <option value="">Small</option>
-              <option value="">Medium</option>
-              <option value="">Large</option>
+            <select onchange="validate(this)">
+              <option value="select">Select Size</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
             </select>
+            <script>
+              function validate(obj) {
+                var value = obj.value;
+                var cost_mes = document.getElementById('cost');
+                var cost = Number('{{ product.cost }}');
+                if (value === 'small') {
+                  cost *= 2;
+                  cost = cost.toFixed(2);
+                  cost_mes.innerHTML = '$'+cost;
+                } else if (value === 'select') {
+                  cost = cost.toFixed(2);
+                  cost_mes.innerHTML = 'from $'+cost;
+                } else if (value === 'medium') {
+                  cost *= 3;
+                  cost = cost.toFixed(2);
+                  cost_mes.innerHTML = '$'+cost;
+                } else if (value === 'large') {
+                  cost *= 6;
+                  cost = cost.toFixed(2);
+                  cost_mes.innerHTML = '$'+cost;
+                }
+              } 
+            </script>
             <br>
             <label>Quantity:</label>
             <br>
             <input type="number" max="9999" min="1" value="1">
           </form>
           <div class="buy">
-            <a href="{% url 'shopPage' %}">Buy Now</a>
+            <a href="{% url 'deals' %}">Buy Now</a>
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
-    {% endfor %}
->>>>>>> e7ad210fe9de3e17f6030a6611c6438f9c547aef
   </section>
+
 
   <section class="section-end">
     <div class="row">
