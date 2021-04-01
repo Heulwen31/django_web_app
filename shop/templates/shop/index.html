@@ -67,6 +67,7 @@
       <div class="product-box">
         {% for instant in object_list %}
         <div class="col span-1-of-4">
+<<<<<<< HEAD
           <a href="{% url 'product' instant.id%}"><img src="{{ instant.image1.url }}" class="product-img" onmouseover="Hover()" onmouseout="Out()"/></a>
           <a href="{% url 'product' instant.id%}" class="product-name">{{ instant.name }}</a>
           <!-- <script>
@@ -77,6 +78,10 @@
               $(".product-img").attr("src","{{ instant.image1.url }}")
             }
           </script> -->
+=======
+          <a href="{% url 'product' %}"><img src="{{ instant.image1.url }}" class="product-img" /></a>
+          <a href="{% url 'product' %}" class="product-name">{{ instant.name }}</a>
+>>>>>>> e7ad210fe9de3e17f6030a6611c6438f9c547aef
         </div>
         {% endfor %}
       </div>

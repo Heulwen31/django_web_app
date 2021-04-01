@@ -55,6 +55,7 @@
   </header>
 
   <section class="product-details">
+<<<<<<< HEAD
     <p class="head">{{ product.name }}</p>
     <div class="row">
       <div class="col span-1-of-2">
@@ -63,6 +64,17 @@
       <div class="col span-1-of-2">
         <div class="form">
           <h1>{{ product.name }}</h1>
+=======
+    {% for instant in object_list %}
+    <p class="head">{{ instant.name }}</p>
+    <div class="row">
+      <div class="col span-1-of-2">
+        <img src="{{ instant.image1.url }}" class="product-img" alt="">
+      </div>
+      <div class="col span-1-of-2">
+        <div class="form">
+          <h1>{{ instant.name }}</h1>
+>>>>>>> e7ad210fe9de3e17f6030a6611c6438f9c547aef
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
             <br> eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
@@ -86,6 +98,10 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+    {% endfor %}
+>>>>>>> e7ad210fe9de3e17f6030a6611c6438f9c547aef
   </section>
 
   <section class="section-end">
