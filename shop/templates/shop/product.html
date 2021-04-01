@@ -16,17 +16,17 @@
   <meta name="msapplication-config" content="{% static 'home/resources/favicons/browserconfig.xml' %}">
   <meta name="theme-color" content="#ffffff">
   <script src="https://kit.fontawesome.com/fe0548406c.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'shop/vendors/css/grid.css' %}">
-  <link rel="stylesheet" href="{% static 'shop/resources/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/resources/css/product.css' %}">
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
   <script src="{% static 'shop/vendors/js/jquery.waypoints.min.js' %}"></script>
-  <script src="{% static 'shop/resources/js/scripts.js' %}"></script>
+  <script src="{% static 'shop/resources/js/product.js' %}"></script>
 </head>
 
 <body>
+
   <header class="header">
     <nav class="sticky">
       <div class="header-title">
@@ -52,33 +52,38 @@
       </div>
     </nav>
     <div class="clearfix"></div>
-    <div class="row">
-      <div class="topic">
-        <h1>Our Plants</h1>
-        <p>Lorem ipsum dolor sit amet Nullam vel ultricies metus, at tincidunt arcu. Morbi 
-          <br> vestibulum, ligula ut efficitur mollis, mi massa accumsan justo.
-        </p>
-      </div>
-    </div>
   </header>
 
-  <section class="product">
+  <section class="product-details">
+    <p class="head">{{ product.name }}</p>
     <div class="row">
-      <div class="product-box">
-        {% for instant in object_list %}
-        <div class="col span-1-of-4">
-          <a href="{% url 'product' instant.id%}"><img src="{{ instant.image1.url }}" class="product-img" onmouseover="Hover()" onmouseout="Out()"/></a>
-          <a href="{% url 'product' instant.id%}" class="product-name">{{ instant.name }}</a>
-          <!-- <script>
-            function Hover() {
-              $(".product-img").attr("src","{{ instant.image2.url }}")
-            }
-            function Out() {
-              $(".product-img").attr("src","{{ instant.image1.url }}")
-            }
-          </script> -->
+      <div class="col span-1-of-2">
+        <img src="{{ product.image1.url }}" class="product-img" alt="">
+      </div>
+      <div class="col span-1-of-2">
+        <div class="form">
+          <h1>{{ product.name }}</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+            <br> eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <form action="">
+            <label>Size:</label>
+            <br>
+            <select>
+              <option value="">Select Size</option>
+              <option value="">Small</option>
+              <option value="">Medium</option>
+              <option value="">Large</option>
+            </select>
+            <br>
+            <label>Quantity:</label>
+            <br>
+            <input type="number" max="9999" min="1" value="1">
+          </form>
+          <div class="buy">
+            <a href="{% url 'shopPage' %}">Buy Now</a>
+          </div>
         </div>
-        {% endfor %}
       </div>
     </div>
   </section>

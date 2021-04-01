@@ -12,3 +12,7 @@ def shop(request):
         "object_list": queryset
     }
     return render(request, 'shop/index.html', context)
+
+def product(request, product_id):
+    product = Product.objects.get(id=product_id)
+    return render(request, 'shop/product.html', {'product': product})
