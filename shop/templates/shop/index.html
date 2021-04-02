@@ -1,75 +1,132 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ornamental Plant Selling</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'home/resources/favicons/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'home/resources/favicons/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'home/resources/favicons/favicon-16x16.png' %}"
+    />
+    <link
+      rel="manifest"
+      href="{% static 'home/resources/favicons/site.webmanifest' %}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'home/resources/favicons/favicon.ico' %}"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="{% static 'home/resources/favicons/browserconfig.xml' %}"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <script
+      src="https://kit.fontawesome.com/fe0548406c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'shop/vendors/css/grid.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'shop/resources/css/styles.css' %}"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'shop/vendors/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'shop/resources/js/scripts.js' %}"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ornamental Plant Selling</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'home/resources/favicons/apple-touch-icon.png' %}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'home/resources/favicons/favicon-32x32.png' %}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'home/resources/favicons/favicon-16x16.png' %}">
-  <link rel="manifest" href="{% static 'home/resources/favicons/site.webmanifest' %}">
-  <link rel="shortcut icon" href="{% static 'home/resources/favicons/favicon.ico' %}">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="{% static 'home/resources/favicons/browserconfig.xml' %}">
-  <meta name="theme-color" content="#ffffff">
-  <script src="https://kit.fontawesome.com/fe0548406c.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'shop/vendors/css/grid.css' %}">
-  <link rel="stylesheet" href="{% static 'shop/resources/css/styles.css' %}">
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
-  <script src="{% static 'shop/vendors/js/jquery.waypoints.min.js' %}"></script>
-  <script src="{% static 'shop/resources/js/scripts.js' %}"></script>
-</head>
-
-<body>
-  <header class="header">
-    <nav class="sticky">
-      <div class="header-title">
-        <div class="header-title-text">
-          <a href="{% url 'home' %}">Ornamental Plant</a>
+  <body>
+    <header class="header">
+      <nav class="sticky">
+        <div class="header-title">
+          <div class="header-title-text">
+            <a href="{% url 'home' %}">Ornamental Plant</a>
+          </div>
+        </div>
+        <div class="header-nav">
+          <ul class="main-nav">
+            <li><a href="{% url 'shopPage' %}">Shop</a></li>
+            <li><a href="{% url 'story' %}">Our Story</a></li>
+            <li id="journal"><a href="{% url 'journal' %}">Journal</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+        </div>
+        <div class="header-actions">
+          <ul class="socials">
+            <li>
+              <a href="https://www.instagram.com/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="{% url 'shopPage' %}"
+                ><i class="fas fa-shopping-cart"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="topic">
+          <h1>Our Plants</h1>
+          <p>
+            Lorem ipsum dolor sit amet Nullam vel ultricies metus, at tincidunt
+            arcu. Morbi <br />
+            vestibulum, ligula ut efficitur mollis, mi massa accumsan justo.
+          </p>
         </div>
       </div>
-      <div class="header-nav">
-        <ul class="main-nav">
-          <li><a href="{% url 'shopPage' %}">Shop</a></li>
-          <li><a href="{% url 'story' %}">Our Story</a></li>
-          <li id="journal"><a href="{% url 'journal' %}">Journal</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
-        </ul>
-      </div>
-      <div class="header-actions">
-        <ul class="socials">
-          <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="{% url 'shopPage' %}"><i class="fas fa-shopping-cart"></i></a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="clearfix"></div>
-    <div class="row">
-      <div class="topic">
-        <h1>Our Plants</h1>
-        <p>Lorem ipsum dolor sit amet Nullam vel ultricies metus, at tincidunt arcu. Morbi 
-          <br> vestibulum, ligula ut efficitur mollis, mi massa accumsan justo.
-        </p>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <section class="product">
-    <div class="row">
-      <div class="product-box">
-        {% for instant in object_list %}
-        <div class="col span-1-of-4">
-          <a href="{% url 'product' instant.id %}"><img src="{{ instant.image1.url }}" class="product-img" onmouseover="Hover()" onmouseout="Out()"></a>
-          <a href="{% url 'product' instant.id %}" class="product-name">{{instant.name}}</a>
-          <!-- <script>
+    <section class="product">
+      <div class="row">
+        <div class="product-box">
+          {% for instant in object_list %}
+          <div class="col span-1-of-4">
+            <a href="{% url 'product' instant.id %}"
+              ><img
+                src="{{ instant.image1.url }}"
+                class="product-img"
+                onmouseover="Hover()"
+                onmouseout="Out()"
+            /></a>
+            <a href="{% url 'product' instant.id %}" class="product-name"
+              >{{instant.name}}</a
+            >
+            <!-- <script>
             function Hover() {
               $(".product-img").attr("src","{{ instant.image2.url }}")
             }
@@ -77,35 +134,44 @@
               $(".product-img").attr("src","{{ instant.image1.url }}")
             }
           </script> -->
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section-end">
-    <div class="row">
-      <div class="col span-1-of-2 box-end">
-        <h4>Crosby</h4>
-        <h5>Made with <a href="#">Rukitori</a></h5>
-        <ul class="socials-end">
-          <li><a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-        </ul>
+    <section class="section-end">
+      <div class="row">
+        <div class="col span-1-of-2 box-end">
+          <h4>Crosby</h4>
+          <h5>Made with <a href="#">Rukitori</a></h5>
+          <ul class="socials-end">
+            <li>
+              <a href="https://instagram.com/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://facebook.com/"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col span-1-of-2">
+          <ul class="nav-end-1">
+            <li><a href="{% url 'shopPage' %}">Shop</a></li>
+            <li><a href="{% url 'journal' %}">Journal</a></li>
+          </ul>
+          <ul class="nav-end-2">
+            <li><a href="{% url 'story' %}">Our Story</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="col span-1-of-2">
-        <ul class="nav-end-1">
-          <li><a href="{% url 'shopPage' %}">Shop</a></li>
-          <li><a href="{% url 'journal' %}">Journal</a></li>
-        </ul>
-        <ul class="nav-end-2">
-          <li><a href="{% url 'story' %}">Our Story</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</body>
-
+    </section>
+  </body>
 </html>

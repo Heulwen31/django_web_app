@@ -1,255 +1,256 @@
 /* ----------------DEFAULT SETUP--------------- */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 
 html {
-    background-color: #ffffff;
-    color: #5a5a5a;
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    text-rendering: optimizeLegibility;
+  background-color: #ffffff;
+  color: #5a5a5a;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
 }
 
 /* -------------REUSABLE---------------- */
 
-.row{
-    width: 1140px;
-    margin: 0 auto;
+.row {
+  width: 1140px;
+  margin: 0 auto;
 }
 
-a{
-    text-decoration: none;
-    color: whitesmoke;
+a {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-li{
-    display: inline-block;
+li {
+  display: inline-block;
 }
 
-.clearfix{
-    clear: both;
+.clearfix {
+  clear: both;
 }
 
-.btn{
-    background-color: #a8a6a1;
-    padding: 25px 35px;
-    border-color: #a8a6a1;
-    font-size: 18px;
+.btn {
+  background-color: #a8a6a1;
+  padding: 25px 35px;
+  border-color: #a8a6a1;
+  font-size: 18px;
 }
 
 /* --------------HEADER--------------- */
 
-.header{
-    background-color: #38383b;
-    height: 16vmax;
+.header {
+  background-color: #38383b;
+  height: 16vmax;
 }
 
-.header-title{
-    width: 25%;
-    float: left;
+.header-title {
+  width: 25%;
+  float: left;
 }
 
-.header-nav{
-    width: 50%;
-    float: left;
+.header-nav {
+  width: 50%;
+  float: left;
 }
 
-.header-actions{
-    width: 25%;
-    float: left;
+.header-actions {
+  width: 25%;
+  float: left;
 }
 
-.header-title-text{
-    margin: 30px 60px;
+.header-title-text {
+  margin: 30px 60px;
 }
 
-.header-title-text a{
-    font-size: 32px;
-    font-weight: 400;
+.header-title-text a {
+  font-size: 32px;
+  font-weight: 400;
 }
 
-.socials{
-    margin-left: 40%;
-    margin-top: 40px;
+.socials {
+  margin-left: 40%;
+  margin-top: 40px;
 }
 
-.main-nav{
-    margin-left: 25%;
-    margin-top: 40px;
+.main-nav {
+  margin-left: 25%;
+  margin-top: 40px;
 }
 
-.main-nav li{
-    margin-left: 20px;
+.main-nav li {
+  margin-left: 20px;
 }
 
-.socials li{
-    margin-right: 30px;
+.socials li {
+  margin-right: 30px;
 }
 
-.sticky{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 900;
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
 }
-
 
 /* ----------------SECTION-PRODUCT---------------- */
 
-.head{
-    color: white;
-    margin-left: 12.5%;
-    margin-bottom: 50px;
+.head {
+  color: white;
+  margin-left: 12.5%;
+  margin-bottom: 50px;
 }
 
-.product-details{
-    background-color: #38383b;
+.product-details {
+  background-color: #38383b;
 }
 
-.product-img{
-    width: 90%;
+.product-img {
+  width: 90%;
 }
 
-.product-name{
-    margin-left: 32%;
-    font-size: 18px;
+.product-name {
+  margin-left: 32%;
+  font-size: 18px;
 }
 
-.form{
-    color: #ffffff;
-    text-align: center;
-    margin-top: 20%;
+.form {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20%;
 }
 
-.form h1{
-    font-size: 45px;
-    font-weight: 100;
-    margin-bottom: 25px;
+.form h1 {
+  font-size: 45px;
+  font-weight: 100;
+  margin-bottom: 25px;
 }
 
-.form h2{
-    font-size: 25px;
-    font-weight: 100;
-    margin-bottom: 25px;
+.form h2 {
+  font-size: 25px;
+  font-weight: 100;
+  margin-bottom: 25px;
 }
 
-.form p{
-    font-size: 16px;
-    word-spacing: 1.5px;
-    line-height: 180%;
-    margin-bottom: 30px;
+.form p {
+  font-size: 16px;
+  word-spacing: 1.5px;
+  line-height: 180%;
+  margin-bottom: 30px;
 }
 
-label{
-    font-size: 17px;
+label {
+  font-size: 17px;
 }
 
-select{
-    width: 50%;
-    padding: 20px 25px;
-    background-color: #38383b;
-    color: white;
-    font-size: 16px;
-    font-weight: 100;
-    margin-top: 15px;
-    margin-bottom: 40px;
-    outline: none;
+select {
+  width: 50%;
+  padding: 20px 25px;
+  background-color: #38383b;
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  outline: none;
 }
 
-option{
-    background-color: white;
-    color: #000;
+option {
+  background-color: white;
+  color: #000;
 }
 
-input{
-    width: 20%;
-    padding: 25px;
-    font-size: 20px;
-    margin-top: 15px;
-    background-color: #38383b;
-    outline: none;
-    color: white;
-    border: 1px groove rgb(247, 233, 233);
+input {
+  width: 20%;
+  padding: 25px;
+  font-size: 20px;
+  margin-top: 15px;
+  background-color: #38383b;
+  outline: none;
+  color: white;
+  border: 1px groove rgb(247, 233, 233);
 }
 
-input:focus{
-    outline: double;
+input:focus {
+  outline: double;
 }
 
-.buy{
-    margin-top: 70px;
+.buy {
+  margin-top: 70px;
 }
 
-.buy a{
-    background-color: #a8a6a1;
-    padding: 15px 35px;
-    border-radius: 10px;
+.buy a {
+  background-color: #a8a6a1;
+  padding: 15px 35px;
+  border-radius: 10px;
 }
 
 /* --------------SECTION-END------------------- */
 
-.section-end{
-    background-color: #38383b;
-    padding-top: 6vmax;
-    padding-bottom: 5vmax;
+.section-end {
+  background-color: #38383b;
+  padding-top: 6vmax;
+  padding-bottom: 5vmax;
 }
 
-.box-end h4{
-    font-size: 30px;
-    color: white;
-    font-weight: 100;
-    margin-bottom: 25px;
+.box-end h4 {
+  font-size: 30px;
+  color: white;
+  font-weight: 100;
+  margin-bottom: 25px;
 }
 
-.box-end h5{
-    font-size: 18px;
-    color: white;
-    font-weight: 100;
-    margin-bottom: 25px;
+.box-end h5 {
+  font-size: 18px;
+  color: white;
+  font-weight: 100;
+  margin-bottom: 25px;
 }
 
-.box-end h5 a{
-    color: rgb(161, 153, 153);
-    border-bottom: 1px solid rgb(161, 153, 153);
+.box-end h5 a {
+  color: rgb(161, 153, 153);
+  border-bottom: 1px solid rgb(161, 153, 153);
 }
 
-.socials-end li{
-    margin-right: 14px;
+.socials-end li {
+  margin-right: 14px;
 }
 
 .socials-end li a i:hover,
-.socials-end li a i:active{
-    color: rgb(168, 154, 154);
+.socials-end li a i:active {
+  color: rgb(168, 154, 154);
 }
 
-.nav-end-1, .nav-end-2{
-    margin-left: 35%;
-    margin-top: 8px;
+.nav-end-1,
+.nav-end-2 {
+  margin-left: 35%;
+  margin-top: 8px;
 }
 
-.nav-end-1 li a, .nav-end-2 li a{
-    color: rgb(184, 165, 165);
-    font-size: 17px;
-    border-bottom: 1px solid rgb(160, 146, 146);
+.nav-end-1 li a,
+.nav-end-2 li a {
+  color: rgb(184, 165, 165);
+  font-size: 17px;
+  border-bottom: 1px solid rgb(160, 146, 146);
 }
 
-.nav-end-1 li{
-    margin-right: 130px;
+.nav-end-1 li {
+  margin-right: 130px;
 }
 
-.nav-end-2 li{
-    margin-right: 93px;
+.nav-end-2 li {
+  margin-right: 93px;
 }
