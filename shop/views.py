@@ -24,17 +24,13 @@ def addDeals(request):
     f = dealsForm()
     return render(request, 'shop/product.html', {'f': f})
 
-
+@login_required(login_url='login')
 def saveDeal(request, product_id):
     if request.method == 'POST':
         user = request.user
-        print(user.username)
         product = Product.objects.get(id=product_id)
-        print(product.name)
         date_posted = timezone.now()
-        print(date_posted)
         ins = Deal(user=user, product=product, date_posted=date_posted)
-        print("hello4")
         ins.save()
         return redirect('shopPage')
     else:

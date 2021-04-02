@@ -118,9 +118,98 @@ li {
   background-color: #38383b;
 }
 
-.product-img {
-  width: 90%;
+img{
+  width: 60%;
 }
+
+.box-slide{
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-img{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.product-img.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-slide span{
+  color: white;
+  font-size: 70px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+#btn-prev{
+  position: absolute;
+  top: 85%;
+  z-index: 10;
+}
+
+#btn-next{
+  position: absolute;
+  top: 85%;
+  left: 39.2%;
+  z-index: 10;
+}
+
+/* --------animation-button-slide------------- */
+
+.bien-mat-ben-trai{
+  animation: bien-mat-ben-trai 1s forwards;
+}
+@-webkit-keyframes bien-mat-ben-trai{
+  from{
+      transform: translateX(0%);
+  }
+  to{
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+}
+.di-vao-ben-phai{
+  animation: di-vao-ben-phai 1s forwards;
+}
+@-webkit-keyframes di-vao-ben-phai{
+  from{
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to{
+      transform: translateX(0%);
+  }
+}
+
+.bien-mat-ben-phai{
+  animation: bien-mat-ben-phai 1s forwards;
+}
+@-webkit-keyframes bien-mat-ben-phai{
+  from{
+      transform: translateX(0%);
+}
+  to{
+      transform: translateX(100%);
+      opacity: 0;
+  }
+}
+.di-vao-ben-trai{
+  animation: di-vao-ben-trai 1s forwards;
+}
+@-webkit-keyframes di-vao-ben-trai{
+  from{
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to{
+      transform: translateX(0%);
+  }
+}
+
 
 .product-name {
   margin-left: 32%;
@@ -189,13 +278,16 @@ input:focus {
 }
 
 .buy {
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
-.buy a {
+.buy input{
+  width: 130px;
   background-color: #a8a6a1;
-  padding: 15px 35px;
-  border-radius: 10px;
+  padding: 15px 10px;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
 }
 
 /* --------------SECTION-END------------------- */
