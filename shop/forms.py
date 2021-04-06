@@ -5,4 +5,4 @@ from .models import Deal
 class dealsForm(forms.ModelForm):
     class Meta:
         model = Deal
-        fields = ['product', ]
+        fields = ['size', 'quantity',]
