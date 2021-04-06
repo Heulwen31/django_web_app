@@ -1,9 +1,9 @@
 $(document).ready(
     function(){
 
-        $('input[type=submit]').click(function() {
-            alert("OK");
-        })
+        // $('input[type=submit]').click(function() {
+        //     alert("OK");
+        // })
 
         // sticky nav
         $('.product-details').waypoint(

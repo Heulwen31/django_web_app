@@ -118,8 +118,14 @@ li {
   background-color: #38383b;
 }
 
-img{
+#img1{
   width: 60%;
+  height: 800px;
+}
+
+#img2{
+  width: 60%;
+  height: 400px;
 }
 
 .box-slide{
@@ -136,6 +142,10 @@ img{
 .product-img.active{
   opacity: 1;
   visibility: visible;
+}
+
+.product-img.second{
+  transform: translate(0%, 38%);
 }
 
 .btn-slide span{
@@ -165,10 +175,9 @@ img{
 }
 @-webkit-keyframes bien-mat-ben-trai{
   from{
-      transform: translateX(0%);
+      opacity: 1;
   }
   to{
-      transform: translateX(-100%);
       opacity: 0;
   }
 }
@@ -177,11 +186,10 @@ img{
 }
 @-webkit-keyframes di-vao-ben-phai{
   from{
-      transform: translateX(100%);
       opacity: 0;
   }
   to{
-      transform: translateX(0%);
+      opacity: 1;
   }
 }
 
@@ -190,10 +198,9 @@ img{
 }
 @-webkit-keyframes bien-mat-ben-phai{
   from{
-      transform: translateX(0%);
+      opacity: 1;
 }
   to{
-      transform: translateX(100%);
       opacity: 0;
   }
 }
@@ -202,11 +209,11 @@ img{
 }
 @-webkit-keyframes di-vao-ben-trai{
   from{
-      transform: translateX(-100%);
+      width: 0;
       opacity: 0;
   }
   to{
-      transform: translateX(0%);
+      opacity: 1;
   }
 }
 
@@ -219,7 +226,7 @@ img{
 .form {
   color: #ffffff;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .form h1 {
@@ -255,6 +262,7 @@ select {
   margin-top: 15px;
   margin-bottom: 40px;
   outline: none;
+  cursor: pointer;
 }
 
 option {
@@ -285,7 +293,8 @@ input:focus {
   width: 130px;
   background-color: #a8a6a1;
   padding: 15px 10px;
-  border-radius: 50px;
+  border-radius: 3px;
+  border: 2px solid #85827a;
   outline: none;
   cursor: pointer;
 }
@@ -294,7 +303,7 @@ input:focus {
 
 .section-end {
   background-color: #38383b;
-  padding-top: 6vmax;
+  padding-top: 15vmax;
   padding-bottom: 5vmax;
 }
 
