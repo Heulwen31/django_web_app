@@ -1,5 +1,4 @@
-from django.shortcuts import redirect, render, get_object_or_404
-from django.http import HttpResponse
+from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from .models import Product, Deal
 from .forms import dealsForm
@@ -24,13 +23,17 @@ def addDeals(request):
     f = dealsForm()
     return render(request, 'shop/product.html', {'f': f})
 
+
 @login_required(login_url='login')
 def saveDeal(request, product_id):
     if request.method == 'POST':
         user = request.user
         product = Product.objects.get(id=product_id)
         date_posted = timezone.now()
-        ins = Deal(user=user, product=product, date_posted=date_posted)
+        size = request.POST['size']
+        quantity = request.POST['quantity']
+        ins = Deal(user=user, product=product, date_posted=date_posted,
+                   size=size, quantity=quantity)
         ins.save()
         return redirect('shopPage')
     else:

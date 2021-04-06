@@ -16,3 +16,5 @@ class Deal(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     date_posted = models.DateTimeField(default=timezone.now)
+    size = models.CharField(max_length=100,  default='DEFAULT VALUE')
+    quantity = models.IntegerField(default = 0, null=True, blank = True)
