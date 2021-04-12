@@ -123,9 +123,7 @@
                 onmouseover="Hover()"
                 onmouseout="Out()"
             /></a>
-            <a href="{% url 'product' instant.id %}" class="product-name"
-              >{{instant.name}}</a
-            >
+            <p class="product-name">{{ instant.name }}</p>
             <!-- <script>
             function Hover() {
               $(".product-img").attr("src","{{ instant.image2.url }}")
