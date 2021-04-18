@@ -38,3 +38,12 @@ def saveDeal(request, product_id):
         return redirect('shopPage')
     else:
         return redirect('product')
+
+
+@login_required(login_url='login')
+def seenDeal(request):
+    query = Deal.objects.filter(user=request.user)
+    content = {
+        "object_deal": query
+    }
+    return render(request, 'shop/deals.html', content)
