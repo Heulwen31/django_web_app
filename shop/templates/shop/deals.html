@@ -19,11 +19,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'shop/vendors/css/grid.css' %}" />
-    <link rel="stylesheet" href="{% static 'shop/resources/css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'shop/resources/css/deals.css' %}" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="{% static 'shop/vendors/js/jquery.waypoints.min.js' %}"></script>
-    <script src="{% static 'shop/resources/js/scripts.js' %}"></script>
+    <script src="{% static 'shop/resources/js/product.js' %}"></script>
 </head>
 
 <body>
@@ -60,34 +60,50 @@
             </div>
         </nav>
         <div class="clearfix"></div>
+    </header>
+
+    <section class="product-details">
         <div class="row">
             <div class="topic">
-                <h1>Our Plants</h1>
+                <h1>Your Plants</h1>
                 <p>
-                    Lorem ipsum dolor sit amet Nullam vel ultricies metus, at tincidunt
-                    arcu. Morbi <br />
-                    vestibulum, ligula ut efficitur mollis, mi massa accumsan justo.
+                  Lorem ipsum dolor sit amet Nullam vel ultricies metus, at tincidunt
+                  arcu. Morbi <br />
+                  vestibulum, ligula ut efficitur mollis, mi massa accumsan justo.
                 </p>
             </div>
         </div>
-    </header>
-
-    <section class="product">
-        <div class="row">
-            <div class="product-box">
-                {% if object_deal %}
-                    {% for instant in object_deal %}
-                    <div class="col span-1-of-4">
-                        <a href="{% url 'product' instant.product.id %}"><img src="{{ instant.product.image1.url }}" class="product-img"
-                                onmouseover="Hover()" onmouseout="Out()" /></a>
-                        <p class="product-name">{{ instant.product.name }}</p>
+        {% csrf_token %}
+        {% if object_deal %}
+            {% for instant in object_deal %}
+            <div class="row">
+                <div class="details">
+                    <div class="col span-1-of-2">
+                        <div class="box-slide">
+                            <div class="product-img active"><img src="{{ instant.product.image1.url }}" id="img1"></div>
+                            <div class="product-img"><img src="{{ instant.product.image2.url }}" id="img2"></div>
+                        </div>
                     </div>
-                    {% endfor %}
-                {% else %}
-                    <h1>hello</h1>
-                {% endif %}
+                    <div class="col span-1-of-2">
+                        <div class="form">
+                            <h1>{{ instant.product.name }}</h1>
+                            <h2 id="cost">${{ instant.product.cost }}.00</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                <br />
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <h2>Quantity: {{ instant.quantity }}</h2>
+                            <h2>Size: {{ instant.size }}</h2>
+                            <h2>Date: {{ instant.date_posted }}</h2>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+            {% endfor %}
+        {% else %}
+        <h1>hello</h1>
+        {% endif %}
     </section>
 
     <section class="section-end">
@@ -122,11 +138,3 @@
 </body>
 
 </html>
-
-<!-- {% if  object_deal %}
-    {% for instant in object_deal %}
-    <h1> {{ instant.product.name }}</h1>
-    {% endfor %}
-    {% else %} 
-    <h1>CO CC</h1>
-    {% endif %} -->
